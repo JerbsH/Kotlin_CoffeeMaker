@@ -1,3 +1,7 @@
+//name: Jere Hippeläinen
+//student number: 2113583
+
+
 class CoffeeMaker(var coffeeCapacity: Int = 50, var waterCapacity: Int = 150) {
 	var coffeeAmount: Int = 0
 		private set
@@ -12,15 +16,17 @@ class CoffeeMaker(var coffeeCapacity: Int = 50, var waterCapacity: Int = 150) {
 	}
 
 	private fun makeCoffee(coffee: Int, water: Int){
-		val useCoff: Int = coffee
-		val useWatr: Int = water
-		if (coffeeAmount - useCoff < 0 || waterAmount - useWatr < 0){
-			println("Not enough ingredients") 
-			return
-		} 
-		coffeeAmount -= useCoff
-		waterAmount -= useWatr
-		println("Made coffee with ${useCoff} - ${useWatr}")
+		if(isOn == true){
+			val useCoff: Int = coffee
+			val useWatr: Int = water
+			if (coffeeAmount - useCoff < 0 || waterAmount - useWatr < 0){
+				println("Not enough ingredients") 
+				return
+			} 
+			coffeeAmount -= useCoff
+			waterAmount -= useWatr
+			println("Made coffee with ${useCoff} - ${useWatr}")
+		} else return
 	}
 	
 	fun makeDoubleEspresso(){ // uses 16 coffee 30 water
