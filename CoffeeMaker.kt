@@ -1,3 +1,7 @@
+//name: Jere Hippeläinen
+//student number: 2113583
+
+
 class CoffeeMaker(var coffeeCapacity: Int = 50, var waterCapacity: Int = 150) {
 	var coffeeAmount: Int = 0
 		private set
